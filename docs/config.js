@@ -3,7 +3,7 @@ window.APP_CONFIG = {
   helperVersion: '1.0.0',
   discoveryInterval: 5000,
   diagnosticTimeout: 3000,
-  endpoints: ['127.0.0.1', '', '', '', '', '', '', '', '', ''],
+  endpoints: ['', '', '', '', '', '', '', '', '', ''],
   rtc: { iceServers: [] },
-  api: { health: '/api/health', stream: '/api/stream', help: '/api/help', helpTest: '/api/help/test', signaling: '/ws' }
+  api: { health: '/api/health', stream: '/api/stream', help: '/api/help', helpTest: '/api/help/test', signaling: '/ws', signalingPortOffset: 1 }
 };

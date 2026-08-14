@@ -19,7 +19,7 @@ Settings can override URLs, polling interval, timeout, and ICE servers in browse
 * `POST /api/help/test` -> `{test:true}` and returns `{success:true,test:true}` without creating a request.
 * `WSS /ws` -> JSON signaling only: `join`, `broadcast`, `viewer-join`, `offer`, `answer`, `ice`, and `broadcast-stop`. Route by `peerId`, `to`, and `room`; reject media payloads.
 
-The helper must support CORS and OPTIONS for these routes and determine client IP itself. It is not included in this repository.
+The helper implementation is included under `helper/`. It supports CORS and OPTIONS for these routes; see `helper/README.md` for installation and HTTPS setup. The frontend never claims an IP address.
 
 ## Architecture and operation
 
