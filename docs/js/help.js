@@ -1,0 +1,2 @@
+import { config } from './config.js'; import { requestJson } from './discovery.js';
+export async function sendHelp(base,payload,test=false){const path=test?window.APP_CONFIG.api.helpTest:window.APP_CONFIG.api.help;const r=await fetch(`${base.replace(/\/$/,'')}${path}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(test?{test:true}:payload)});if(!r.ok)throw Object.assign(new Error(`HTTP ${r.status}`),{code:'HELP-001'});return r.json()}
